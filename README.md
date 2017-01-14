@@ -1,2 +1,3 @@
 # ant-colony-optimization
-Processing project for (i) Ant Colony Optimization
+Processing project for
+* (i) Ant Colony Optimization
