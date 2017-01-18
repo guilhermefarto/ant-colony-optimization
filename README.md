@@ -26,7 +26,7 @@ Usage:
 asdf
 
 <a name="aco-instructions"></a>
-## Instructions for ACO simulation (<kbd>keyboard</kbd> and <kbd>mouse</kbd> commands)
+## Instructions for ACO simulation (keyboard and mouse commands)
 
 asdf
 
