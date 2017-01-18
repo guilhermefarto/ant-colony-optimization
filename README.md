@@ -51,6 +51,8 @@ asdf
 <a name="aco-examples-1"></a>
 ### > Setting anthill, ants (in total of 10), and food repositories
 
+asdf
+
 | aco-simulation_1.png     | aco-simulation_2.png     | aco-simulation_3.png     |
 | ------------------------ | ------------------------ | ------------------------ |
 | ![](examples/1/aco-simulation_1.png) | ![](examples/1/aco-simulation_2.png) | ![](examples/1/aco-simulation_3.png) |
@@ -63,6 +65,8 @@ asdf
 
 <a name="aco-examples-2"></a>
 ### > Setting anthill and food repositories but generating 50 random ants
+
+asdf
 
 | aco-simulation_1.png     | aco-simulation_2.png     | aco-simulation_3.png     | aco-simulation_4.png     |
 | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
