@@ -41,9 +41,9 @@ asdf
 | Keyboard    | Press <kbd>6</kbd>      | Change framerate to 60                  |
 | Keyboard    | Press <kbd>F</kbd>      | Show or hide pheromone for Food         |
 | Keyboard    | Press <kbd>C</kbd>      | Show or hide pheromone for Colony       |
-| Mouse       | `Left` click   | Create an ant at (x, y) mouse event     |
-| Mouse       | `Right` click  | Create a food at (x, y) mouse event     |
-| Mouse       | `Center` click | Create an anthill at (x, y) mouse event |
+| Mouse       | `Left` click   | Create an ant at `(x, y)` mouse event     |
+| Mouse       | `Right` click  | Create a food at `(x, y)` mouse event     |
+| Mouse       | `Center` click | Create an anthill at `(x, y)` mouse event |
 
 <a name="all-examples"></a>
 ## Examples
