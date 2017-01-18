@@ -114,8 +114,26 @@ asdf
 | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
 | ![](examples/2/aco-simulation_5.png) | ![](examples/2/aco-simulation_6.png) | ![](examples/2/aco-simulation_7.png) | ![](examples/2/aco-simulation_8.png) |
 
-| aco-simulation_9.png     | aco-simulation_10.png     | aco-simulation_11.png     |
+| aco-simulation_9.png     | aco-simulation_10.png    | aco-simulation_11.png    |
 | ------------------------ | ------------------------ | ------------------------ |
 | ![](examples/2/aco-simulation_9.png) | ![](examples/2/aco-simulation_10.png) | ![](examples/2/aco-simulation_11.png) |
+
+asdf
+
+<a name="aco-future-directions"></a>
+## Future directions
+
+<a name="aco-future-directions-1"></a>
+### > Multiple ant colonies for ACO
+
+asdf
+
+<a name="aco-future-directions-2"></a>
+### > Setting obstacles and/or ant predators
+
+asdf
+
+<a name="aco-future-directions-3"></a>
+### > Natural selection, genetic algorithms, and lifetime characteristics
 
 asdf
