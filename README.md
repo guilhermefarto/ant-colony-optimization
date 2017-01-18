@@ -25,6 +25,28 @@ Usage:
 
 asdf
 
+### Classes of Ant Colony Optimization
+
+> Ant.pde
+
+asdf
+
+> Anthill.pde
+
+asdf
+
+> Food.pde
+
+asdf
+
+> Map.pde
+
+asdf
+
+> Pheromone.pde
+
+asdf
+
 <a name="aco-instructions"></a>
 ## Instructions for ACO simulation (keyboard and mouse commands)
 
