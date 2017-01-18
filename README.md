@@ -20,11 +20,16 @@ Feel free to contact me by mail: guilherme.farto@gmail.com
 Usage:
 `Open the main .pde file (AntColonyProblem.pde) and run it by the Processing IDE`
 
+<a name="aco-instructions"></a>
+## Instructions for ACO simulation (keyboard and mouse commands)
+
+asdf
+
 <a name="all-examples"></a>
 ## Examples
 
 <a name="aco-examples-1"></a>
-### > asdf
+### > Setting anthill, ants (in total of 10), and food repositories
 
 | aco-simulation_1.png     | aco-simulation_2.png     | aco-simulation_3.png     |
 | ------------------------ | ------------------------ | ------------------------ |
@@ -37,7 +42,7 @@ Usage:
 asdf
 
 <a name="aco-examples-2"></a>
-### > asdf
+### > Setting anthill and food repositories but generating 50 random ants
 
 | aco-simulation_1.png     | aco-simulation_2.png     | aco-simulation_3.png     | aco-simulation_4.png     |
 | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
