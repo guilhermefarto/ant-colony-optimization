@@ -20,7 +20,7 @@ Feel free to contact me by mail: guilherme.farto@gmail.com
 Usage:
 
 `Open the main .pde file (AntColonyOptimization.pde) and run it by the Processing IDE`
-* Pressing <kbd>CTRL</kbd>+<kbd>R</kbd>;
+* Pressing <kbd>CTRL</kbd>+<kbd>R</kbd>; or
 * Selecting menu <kbd>Sketch</kbd> and <kbd>Run</kbd>;
 
 ### Main concepts of Ant Colony Optimization (introduction and concepts)
