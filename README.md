@@ -5,7 +5,7 @@
 
 ## Dependencies
 
-All dependencies of the project are native to Processing platform.
+All dependencies of this project are native to Processing platform.
 
 ## Contact / License
 
@@ -18,6 +18,7 @@ Feel free to contact me by mail: guilherme.farto@gmail.com
 > Based on Ant Colony Optimization algorithm - a probabilistic technique for solving computational problems which can be reduced to finding good paths through graphs
 
 Usage:
+
 `Open the main .pde file (AntColonyProblem.pde) and run it by the Processing IDE`
 
 <a name="aco-instructions"></a>
