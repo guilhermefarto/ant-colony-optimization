@@ -30,20 +30,20 @@ asdf
 
 asdf
 
-| Type        | Command        | Description                             |
-| ----------- | -------------- | --------------------------------------- |
-| Keyboard    | Press <kbd>S</kbd>      | Start simulation                        |
-| Keyboard    | Press <kbd>=</kbd>      | Increase food size                      |
-| Keyboard    | Press <kbd>-</kbd>      | Decrease food size                      |
-| Keyboard    | Press <kbd>0</kbd>      | Change framerate to 2                   |
-| Keyboard    | Press <kbd>1</kbd>      | Change framerate to 10                  |
-| Keyboard    | Press <kbd>3</kbd>      | Change framerate to 30                  |
-| Keyboard    | Press <kbd>6</kbd>      | Change framerate to 60                  |
-| Keyboard    | Press <kbd>F</kbd>      | Show or hide pheromone for Food         |
-| Keyboard    | Press <kbd>C</kbd>      | Show or hide pheromone for Colony       |
-| Mouse       | `Left` click   | Create an ant at `(x, y)` mouse event     |
-| Mouse       | `Right` click  | Create a food at `(x, y)` mouse event     |
-| Mouse       | `Center` click | Create an anthill at `(x, y)` mouse event |
+| Type          | Command            | Description                               |
+| ------------- | ------------------ | ----------------------------------------- |
+| `Keyboard`    | Press <kbd>S</kbd> | Start simulation                          |
+| `Keyboard`    | Press <kbd>=</kbd> | Increase food size                        |
+| `Keyboard`    | Press <kbd>-</kbd> | Decrease food size                        |
+| `Keyboard`    | Press <kbd>0</kbd> | Change framerate to 2                     |
+| `Keyboard`    | Press <kbd>1</kbd> | Change framerate to 10                    |
+| `Keyboard`    | Press <kbd>3</kbd> | Change framerate to 30                    |
+| `Keyboard`    | Press <kbd>6</kbd> | Change framerate to 60                    |
+| `Keyboard`    | Press <kbd>F</kbd> | Show or hide pheromone for Food           |
+| `Keyboard`    | Press <kbd>`C`</kbd> | Show or hide pheromone for Colony         |
+| `Mouse`       | `Left` click       | Create an ant at `(x, y)` mouse event     |
+| `Mouse`       | `Right` click      | Create a food at `(x, y)` mouse event     |
+| `Mouse`       | `Center` click     | Create an anthill at `(x, y)` mouse event |
 
 <a name="all-examples"></a>
 ## Examples
