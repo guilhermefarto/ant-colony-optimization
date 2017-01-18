@@ -14,12 +14,12 @@ Feel free to contact me by mail: guilherme.farto@gmail.com
 ---
 
 <a name="aco"></a>
-## Ant Colony Optimization (AntColonyProblem.pde and other .pde files)
+## Ant Colony Optimization (AntColonyOptimization.pde and other .pde files)
 > Based on Ant Colony Optimization algorithm - a probabilistic technique for solving computational problems which can be reduced to finding good paths through graphs
 
 Usage:
 
-`Open the main .pde file (AntColonyProblem.pde) and run it by the Processing IDE`
+`Open the main .pde file (AntColonyOptimization.pde) and run it by the Processing IDE`
 
 ### Main concepts of Ant Colony Optimization (introduction and concepts)
 
@@ -57,7 +57,7 @@ asdf
 
   asdf
 
-* **AntColonyProblem.pde**
+* **AntColonyOptimization.pde**
 
   > asdf
 
