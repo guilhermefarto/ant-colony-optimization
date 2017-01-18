@@ -14,7 +14,7 @@ Feel free to contact me by mail: guilherme.farto@gmail.com
 ---
 
 <a name="aco"></a>
-## Ant Colony Optimization (AntColonyOptimization.pde and other .pde files)
+## Ant Colony Optimization (AntColonyOptimization.pde)
 > Based on Ant Colony Optimization algorithm - a probabilistic technique for solving computational problems which can be reduced to finding good paths through graphs
 
 Usage:
