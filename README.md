@@ -21,10 +21,30 @@ Usage:
 
 `Open the main .pde file (AntColonyProblem.pde) and run it by the Processing IDE`
 
+### Main concepts of Ant Colony Optimization (introduction and concepts)
+
+asdf
+
 <a name="aco-instructions"></a>
 ## Instructions for ACO simulation (keyboard and mouse commands)
 
 asdf
+
+| Type        | Command        | Description                             |
+| ----------- | -------------- | --------------------------------------- |
+| Keyboard    | Press `s`      | Start simulation                        |
+| Keyboard    | Press `=`      | Increase food size                      |
+| Keyboard    | Press `-`      | Decrease food size                      |
+| Keyboard    | Press `0`      | Change framerate to 2                   |
+| Keyboard    | Press `1`      | Change framerate to 10                  |
+| Keyboard    | Press `3`      | Change framerate to 30                  |
+| Keyboard    | Press `6`      | Change framerate to 60                  |
+| Keyboard    | Press `f`      | Show or hide pheromone for Food         |
+| Keyboard    | Press `c`      | Show or hide pheromone for Colony       |
+| ----------- | -------------- | --------------------------------------- |
+| Mouse       | `Left` click   | Create an ant at (x, y) mouse event     |
+| Mouse       | `Right` click  | Create a food at (x, y) mouse event     |
+| Mouse       | `Center` click | Create an anthill at (x, y) mouse event |
 
 <a name="all-examples"></a>
 ## Examples
