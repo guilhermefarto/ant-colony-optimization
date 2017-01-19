@@ -35,7 +35,7 @@ asdf
 
 Each ant is uniquely identified through the attribute called `id`.
   
-The attributes of an object of the Ant class are:
+The attributes for Ant class are:
   
 ```python
 	int id
@@ -50,7 +50,7 @@ The attributes of an object of the Ant class are:
 	float pheromoneForceForAnthill
 ```
 
-The methods of an object of the Ant class are:
+The methods for Ant class are:
 
 ```python
     void draw() { ... }
@@ -94,7 +94,7 @@ There must be only one object of the Anthill class in an ACO simulation.
 
 All the food collected by the ants will be deposited in the anthill (as long as the ants can return to the anthill through the trail pheromone).
 
-The attributes of an object of the Anthill class are:
+The attributes for Anthill class are:
 
 ```python
 	int scale
@@ -103,7 +103,7 @@ The attributes of an object of the Anthill class are:
 	int totalOfFood
 ```
 
-The methods of an object of Anthill class are:
+The methods for Anthill class are:
 
 ```python
 	void draw() { ... }
@@ -118,7 +118,7 @@ An anthill can be added or redefined in the ACO simulation by clicking the cente
 
 Each food is uniquely identified through the attribute called `id`.
 
-The attributes of an object of the Food class are:
+The attributes for Food class are:
 
 ```python
 	int id
@@ -129,7 +129,7 @@ The attributes of an object of the Food class are:
 	int value
 ```
 
-The methods of an object of the Food class are:
+The methods for Food class are:
 
 ```python
 	void draw() { ... }
@@ -158,7 +158,7 @@ Food will cease to exist when its value is equal to or less than 0. This means t
 
 Each pheromone is uniquely identified through the attribute called `id`.
 
-The attributes of an object of the Pheromone class are:
+The attributes for Pheromone class are:
 
 ```python
 	String id # concat of x + ";" + y
@@ -169,7 +169,7 @@ The attributes of an object of the Pheromone class are:
 	float value
 ```
 
-The methods of an object of the Pheromone class are:
+The methods for Pheromone class are:
 
 ```python
 	void draw() { ... }
@@ -194,7 +194,7 @@ It is important to mention that the strength (or efficiency) of an ant's pheromo
 
 By default, the ACO simulation uses two Map objects: (i) a map that contains the food trail pheromones and (ii) a map that contains the anthill trail pheromones.
 
-The attributes of an object of the Map class are:
+The attributes for Map class are:
 
 ```python
 	final float DEFAULT_PHEROMONE = 100
@@ -215,7 +215,7 @@ The attributes of an object of the Map class are:
 	boolean showPheromone = true
 ```
 
-The methods of an object of the Map class are:
+The methods for Map class are:
 
 ```python
 	void draw() { ... }
@@ -262,7 +262,7 @@ The Map class is responsible for the interaction between entities representing a
 
 The AntColonyOptimization class is responsible for configuring and simulating experiments based on the ACO approach.
 
-The main attributes of an object of the AntColonyOptimization class are:
+The main attributes for AntColonyOptimization class are:
 
 ```python
 	final int DEFAULT_ANTS_COUNT = 50
@@ -283,7 +283,7 @@ The main attributes of an object of the AntColonyOptimization class are:
 	boolean started = false
 ```
 
-The methods of an object of the AntColonyOptimization class are:
+The methods for AntColonyOptimization class are:
 
 ```python
 	void setup() { ... }
