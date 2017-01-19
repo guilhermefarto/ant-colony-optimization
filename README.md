@@ -64,7 +64,7 @@ The methods for Ant class are:
 
 Ants can be added to the ACO simulation in two ways:
 
-* By clicking the left mouse button;
+* By left-clicking the mouse button;
 * By starting a simulation on a map that contains only the anthill and food (thus, 50 ants will be dynamically added to the simulation);
 
 > This amount of ants can be modified by changing the constant value of the AntColonyOptimization class based on the following `snippet`:
@@ -110,7 +110,7 @@ The methods for Anthill class are:
 	void depositFood(int foodLoaded) { ... }
 ```
 
-An anthill can be added or redefined in the ACO simulation by clicking the center mouse button (scrollbar wheel button). A new one will be added if there is no anthill on the map. If it already exists, the current anthill will no longer exist and a new one will be created based on the position of the last mouse click event.
+An anthill can be added or redefined in the ACO simulation by middle-clicking the mouse button (scrollbar wheel button). A new one will be added if there is no anthill on the map. If it already exists, the current anthill will no longer exist and a new one will be created based on the position of the last mouse click event.
 
 * **Food.pde**
 
@@ -138,7 +138,7 @@ The methods for Food class are:
 	boolean hasValue() { ... }
 ```
 
-Food can be added to the ACO simulation by right-clicking.
+Food can be added to the ACO simulation by right-clicking the mouse button.
 
 The size of the food can be modified by pressing <kbd>=</kbd> (to increase food size) or <kbd>-</kbd> (to decrease food size).
 
