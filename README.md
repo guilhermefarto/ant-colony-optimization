@@ -37,11 +37,11 @@ Each ant is uniquely identified through the attribute called `id`.
   
 The attributes for Ant class are:
   
-```python
+```java
 	int id
 	
 	int scale
-	int x, y # (ant position at map)
+	int x, y // (ant position at map)
 	
 	boolean hasFood
 	float foodLoaded
@@ -52,7 +52,7 @@ The attributes for Ant class are:
 
 The methods for Ant class are:
 
-```python
+```java
     void draw() { ... }
     void drawSmallFood() { ... }
 
@@ -69,7 +69,7 @@ Ants can be added to the ACO simulation in two ways:
 
 > This amount of ants can be modified by changing the constant value of the AntColonyOptimization class based on the following `snippet`:
 
-```python
+```java
 	final int DEFAULT_ANTS_COUNT = 50
 ```
 
@@ -96,16 +96,16 @@ All the food collected by the ants will be deposited in the anthill (as long as 
 
 The attributes for Anthill class are:
 
-```python
+```java
 	int scale
-	int x, y # (anthill position at map)
+	int x, y // (anthill position at map)
 
 	int totalOfFood
 ```
 
 The methods for Anthill class are:
 
-```python
+```java
 	void draw() { ... }
 	void depositFood(int foodLoaded) { ... }
 ```
@@ -120,18 +120,18 @@ Each food is uniquely identified through the attribute called `id`.
 
 The attributes for Food class are:
 
-```python
+```java
 	int id
 
 	int scale
-	int x, y # (food position at map)
+	int x, y // (food position at map)
 
 	int value
 ```
 
 The methods for Food class are:
 
-```python
+```java
 	void draw() { ... }
 
 	void updateValue() { ... }
@@ -146,7 +146,7 @@ Each (block of) food will contain a random value ranging from 4 to 10. In this w
 
 This value range can be modified in the constructor method of the Food class based on the following `snippet`:
 
-```python
+```java
 	this.value = (int) random(4, 10);
 ```
 
@@ -160,18 +160,18 @@ Each pheromone is uniquely identified through the attribute called `id`.
 
 The attributes for Pheromone class are:
 
-```python
-	String id # concat of x + ";" + y
+```java
+	String id // concat of x + ";" + y
 
 	int scale
-	int x, y # (pheromone position at map)
+	int x, y // (pheromone position at map)
 
 	float value
 ```
 
 The methods for Pheromone class are:
 
-```python
+```java
 	void draw() { ... }
 
 	boolean update(float pheromoneForce) { ... }
@@ -196,7 +196,7 @@ By default, the ACO simulation uses two Map objects: (i) a map that contains the
 
 The attributes for Map class are:
 
-```python
+```java
 	final float DEFAULT_PHEROMONE = 100
 	final float EVAPORATION_RATE = .999
 	final float USE_RATE = .995
@@ -217,7 +217,7 @@ The attributes for Map class are:
 
 The methods for Map class are:
 
-```python
+```java
 	void draw() { ... }
 	void drawFieldLimits() { ... }
 	void drawFieldInnerLimits() { ... }
@@ -264,7 +264,7 @@ The AntColonyOptimization class is responsible for setting and simulating experi
 
 The main attributes for AntColonyOptimization class are:
 
-```python
+```java
 	final int DEFAULT_ANTS_COUNT = 50
 	final int DEFAULT_SCALE = 6
 	final int COLONY_SIZE = 600
@@ -285,7 +285,7 @@ The main attributes for AntColonyOptimization class are:
 
 The methods for AntColonyOptimization class are:
 
-```python
+```java
 	void setup() { ... }
 
 	void draw() { ... }
