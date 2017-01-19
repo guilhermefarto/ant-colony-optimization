@@ -50,7 +50,7 @@ The attributes of an object of the Ant class are:
 	float pheromoneForceForAnthill
 ```
 
-The methods of an object of Ant class are:
+The methods of an object of the Ant class are:
 
 ```python
     void draw() { ... }
@@ -129,7 +129,7 @@ The attributes of an object of the Food class are:
 	int value
 ```
 
-The methods of an object of Food class are:
+The methods of an object of the Food class are:
 
 ```python
 	void draw() { ... }
@@ -169,7 +169,7 @@ The attributes of an object of the Pheromone class are:
 	float value
 ```
 
-The methods of an object of Pheromone class are:
+The methods of an object of the Pheromone class are:
 
 ```python
 	void draw() { ... }
@@ -215,7 +215,7 @@ The attributes of an object of the Map class are:
 	boolean showPheromone = true
 ```
 
-The methods of an object of Map class are:
+The methods of an object of the Map class are:
 
 ```python
 	void draw() { ... }
@@ -283,7 +283,7 @@ The main attributes of an object of the AntColonyOptimization class are:
 	boolean started = false
 ```
 
-The methods of an object of AntColonyOptimization class are:
+The methods of an object of the AntColonyOptimization class are:
 
 ```python
 	void setup() { ... }
