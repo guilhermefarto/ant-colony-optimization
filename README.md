@@ -37,7 +37,7 @@ Each ant is uniquely identified through the attribute called `id`.
   
 The attributes of an object of the Ant class are:
   
-```java
+```python
     int id
 
     int scale
