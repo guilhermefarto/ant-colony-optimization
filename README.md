@@ -31,9 +31,60 @@ asdf
 
 * **Ant.pde**
 
-  > asdf
+> Class that represents the ant entity.
 
-  asdf
+Each ant is uniquely identified through the attribute called `id`.
+  
+The attributes of an object of the Ant class are:
+  
+```java
+    int id
+
+    int scale
+    int x, y # (ant position at map)
+
+    boolean hasFood
+    float foodLoaded
+    int bored
+    float pheromoneForceForFood
+    float pheromoneForceForAnthill
+```
+
+The methods of an object of Ant class are:
+
+```java
+    void draw() { ... }
+    void drawSmallFood() { ... }
+
+    void step() { ... }
+    void depositFood() { ... }
+    boolean bite(Food food) { ... }
+    void releasePheromone(float pheromoneForce, Map map) { ... }
+```
+
+Ants can be added to the ACO simulation in two ways:
+
+* By clicking the left mouse button;
+* By starting a simulation on a map that contains only the anthill and food (thus, 50 ants will be dynamically added to the simulation);
+
+> This amount of ants can be modified by changing the constant value of the AntColonyOptimization class based on the following `snippet`:
+
+```java
+	final int DEFAULT_ANTS_COUNT = 50
+```
+
+Each ant will perform two essential activities during the simulation:
+
+* Search for food along the map;
+* Transporting and depositing food in the anthill;
+
+Ants will release pheromone in the path traveled regardless of the activity they are performing. Over time, the pheromone attraction force will be reduced. The pulling force of an ant's pheromone will be reset to the default value (i) when the ant finds the food and (ii) when the ant returns and deposits the food in the anthill (and go out in search of food again).
+
+The release of pheromones by an ant contributes to the orientation (or suggestion) the other in a way that can guide you in search of food, as well as in nature. A longer time is needed for the trail pheromone to evaporate when more ants go through the predetermined path. If a trail pheromone is no longer used or is underutilized for a given period, there will be evaporation of pheromone. As a result, the pheromone trail will be reduced and / or erased, restricting the possibility of other ants moving in the same direction.
+
+The pheromone release and evaporation processes contribute, respectively, (i) to strengthen and increase the probability of other ants follow the same path in search of food and (ii) to avoid convergence to an optimal local solution, allowing bad decisions (paths) to be forgotten.
+
+The ACO simulation assumes that ants can become bored and thus stop moving for a brief period.
 
 * **Anthill.pde**
 
