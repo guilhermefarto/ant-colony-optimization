@@ -38,21 +38,21 @@ Each ant is uniquely identified through the attribute called `id`.
 The attributes of an object of the Ant class are:
   
 ```python
-    int id
-
-    int scale
-    int x, y # (ant position at map)
-
-    boolean hasFood
-    float foodLoaded
-    int bored
-    float pheromoneForceForFood
-    float pheromoneForceForAnthill
+	int id
+	
+	int scale
+	int x, y # (ant position at map)
+	
+	boolean hasFood
+	float foodLoaded
+	int bored
+	float pheromoneForceForFood
+	float pheromoneForceForAnthill
 ```
 
 The methods of an object of Ant class are:
 
-```java
+```python
     void draw() { ... }
     void drawSmallFood() { ... }
 
@@ -69,7 +69,7 @@ Ants can be added to the ACO simulation in two ways:
 
 > This amount of ants can be modified by changing the constant value of the AntColonyOptimization class based on the following `snippet`:
 
-```java
+```python
 	final int DEFAULT_ANTS_COUNT = 50
 ```
 
@@ -88,33 +88,221 @@ The ACO simulation assumes that ants can become bored and thus stop moving for a
 
 * **Anthill.pde**
 
-  > asdf
+> Class that represents the anthill entity.
 
-  asdf
+There must be only one object of the Anthill class in an ACO simulation.
+
+All the food collected by the ants will be deposited in the anthill (as long as the ants can return to the anthill through the trail pheromone).
+
+The attributes of an object of the Anthill class are:
+
+```python
+	int scale
+	int x, y # (anthill position at map)
+
+	int totalOfFood
+```
+
+The methods of an object of Anthill class are:
+
+```python
+	void draw() { ... }
+	void depositFood(int foodLoaded) { ... }
+```
+
+An anthill can be added or redefined in the ACO simulation by clicking the center mouse button (scrollbar wheel button). A new one will be added if there is no anthill on the map. If it already exists, the current anthill will no longer exist and a new one will be created based on the position of the last mouse click event.
 
 * **Food.pde**
 
-  > asdf
+> Class that represents the food entity.
 
-  asdf
+Each food is uniquely identified through the attribute called `id`.
+
+The attributes of an object of the Food class are:
+
+```python
+	int id
+
+	int scale
+	int x, y # (food position at map)
+
+	int value
+```
+
+The methods of an object of Food class are:
+
+```python
+	void draw() { ... }
+
+	void updateValue() { ... }
+	boolean hasValue() { ... }
+```
+
+Food can be added to the ACO simulation by right-clicking.
+
+The size of the food can be modified by pressing <kbd>=</kbd> (to increase food size) or <kbd>-</kbd> (to decrease food size).
+
+Each food block will contain a value ranging from 4 to 10 randomly. In this way, the ACO simulation can exercise the algorithm considering that food is available in varying quantities (larger ones and smaller ones) - just as in the real world.
+
+This value range can be modified in the Food class constructor method based on the following `snippet`:
+
+```python
+	this.value = (int) random(4, 10);
+```
+
+Food will cease to exist when its value is equal to or less than 0. This means that one or more ants have already withdrawn (or bitten) the food completely.
 
 * **Pheromone.pde**
 
-  > asdf
+> Class that represents the pheromone entity (pheromone secreted or excreted by ants).
 
-  asdf
+Each pheromone is uniquely identified through the attribute called `id`.
+
+The attributes of an object of the Pheromone class are:
+
+```python
+	String id # concat of x + ";" + y
+
+	int scale
+	int x, y # (pheromone position at map)
+
+	float value
+```
+
+The methods of an object of Pheromone class are:
+
+```python
+	void draw() { ... }
+
+	boolean update(float pheromoneForce) { ... }
+	boolean evaporate(float evaporationRate) { ... }
+	static String getPheromoneId(int x, int y) { ... }
+```
+
+Pheromones are instantiated and added to the ACO simulation in two ways:
+
+* When the ants leave the anthill and search for food;
+* When the ants find food and return to the anthill (to deposit the food collected);
+
+Therefore, the simulation will have two trails of pheromones that are reinforced, when ants transit the same path, but also evaporate, when ants cease to transit through it.
+
+It is important to mention that the strength (or efficiency) of an ant's pheromone is reduced over time. However, when food is found or the anthill is located, its force value will be reseted to the default value.
 
 * **Map.pde**
 
-  > asdf
+> Class that represents the map (or terrain) entity in which ants, food, pheromones, and anthill are contained.
 
-  asdf
+By default, the ACO simulation uses two Map objects: (i) a map that contains the food trail pheromones and (ii) a map that contains the anthill trail pheromones.
+
+The attributes of an object of the Map class are:
+
+```python
+	final float DEFAULT_PHEROMONE = 100
+	final float EVAPORATION_RATE = .999
+	final float USE_RATE = .995
+
+	int scale
+	int width
+	int height
+
+	HashMap<Integer, Ant> ants
+	HashMap<Integer, Food> foods
+	Anthill anthill
+
+	HashMap<String, Pheromone> pheromones = new HashMap<String, Pheromone>()
+	ArrayList<Pheromone> pheromonesToRemove = new ArrayList<Pheromone>()
+	
+	boolean showPheromone = true
+```
+
+The methods of an object of Map class are:
+
+```python
+	void draw() { ... }
+	void drawFieldLimits() { ... }
+	void drawFieldInnerLimits() { ... }
+	void drawPheromones() { ... }
+
+	void clear() { ... }
+
+	void setAnthill(Anthill anthill) { ... }
+	Anthill getAnthill() { ... }
+	Anthill getAnthill(int x, int y, boolean isNear) { ... }
+
+	void start() { ... }
+	void step() { ... }
+
+	int[] getStrongestPath(Ant ant) { ... }
+
+	void releasePheromone(int x, int y, float pheromoneForce) { ... }
+	void createPheromone(int x, int y, float pheromoneForce) { ... }
+
+	float getPheromone(Ant ant, int[] directions) { ... }
+	float getPheromone(int[] directions) { ... }
+	float getPheromone(int x, int y) { ... }
+
+	void evaporatePheromones() { ... }
+
+	Food getFood(int x, int y, boolean isNear) { ... }
+	void updateFood(Food food) { ... }
+
+	int[] getDirectionsForObject(int x, int y, int[] directions) { ... }
+	Object hasObjectAt(int x, int y) { ... }
+
+	void showHidePheromone() { ... }
+
+	int getTotalOfFood() { ... }
+```
+
+The Map class is responsible for the interaction between entities representing ants, anthill, and food. It is also through the Map that occurs the release and evaporation of the trail pheromone. In this way, it provides the necessary mechanism for the orientation of the ants by the pheromones approach.
 
 * **AntColonyOptimization.pde**
 
-  > asdf
+> Main class that represents the integration of all entities (ant, anthill, food, pheromone, and map) of the Ant Colony Optimization context.
 
-  asdf
+The AntColonyOptimization class is responsible for configuring and simulating experiments based on the ACO approach.
+
+The main attributes of an object of the AntColonyOptimization class are:
+
+```python
+	final int DEFAULT_ANTS_COUNT = 50
+	final int DEFAULT_SCALE = 6
+	final int COLONY_SIZE = 600
+	final int PANEL_OFFSET = COLONY_SIZE
+	final int PANEL_SIZE = 200
+	
+	HashMap<Integer, Ant> ants = new HashMap<Integer, Ant>()
+	HashMap<Integer, Food> foods = new HashMap<Integer, Food>()
+	Anthill anthill
+	
+	Map mapFood = new Map(DEFAULT_SCALE, COLONY_SIZE, COLONY_SIZE, ants, foods)
+	Map mapColony = new Map(DEFAULT_SCALE, COLONY_SIZE, COLONY_SIZE, ants, foods)
+	
+	int foodSize = 5
+	
+	boolean started = false
+```
+
+The methods of an object of AntColonyOptimization class are:
+
+```python
+	void setup() { ... }
+
+	void draw() { ... }
+	void drawField() { ... }
+	void loadFieldSize() { ... }
+
+	void createAnt(int x, int y) { ... }
+	void createFood(int x, int y) { ... }
+	void createAnthill(int x, int y) { ... }
+	void createRandomAnthill() { ... }
+
+	void increaseFoodSize() { ... }
+	void decreaseFoodSize() { ... }
+
+	void mousePressed() { ... }
+	void keyPressed() { ... }
+```
 
 <a name="aco-instructions"></a>
 ## Instructions for ACO simulation (keyboard and mouse commands)
