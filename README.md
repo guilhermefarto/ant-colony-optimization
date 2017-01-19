@@ -76,15 +76,15 @@ Ants can be added to the ACO simulation in two ways:
 Each ant will perform two essential activities during the simulation:
 
 * Search for food along the map;
-* Transporting and depositing food in the anthill;
+* Transport and deposit food in the anthill;
 
-Ants will release pheromone in the path traveled regardless of the activity they are performing. Over time, the pheromone attraction force will be reduced. The pulling force of an ant's pheromone will be reset to the default value (i) when the ant finds the food and (ii) when the ant returns and deposits the food in the anthill (and go out in search of food again).
+Ants will release pheromone in the trail traveled regardless of the activity they are performing. Over time, the pheromone attraction force will be reduced. The attraction force of an ant's pheromone will be reset to the default value (i) when the ant finds the food and (ii) when the ant returns and deposits the food in the anthill (and go out in search of food again).
 
-The release of pheromones by an ant contributes to the orientation (or suggestion) the other in a way that can guide you in search of food, as well as in nature. A longer time is needed for the trail pheromone to evaporate when more ants go through the predetermined path. If a trail pheromone is no longer used or is underutilized for a given period, there will be evaporation of pheromone. As a result, the pheromone trail will be reduced and / or erased, restricting the possibility of other ants moving in the same direction.
+The pheromones released by an ant contributes to the orientation (or suggestion) in a way that can guide other ants in the search of food, as well as in nature. A longer time is needed for the trail pheromone to evaporate when more ants go through the predetermined path. There will be evaporation of pheromone if a trail pheromone is no longer used or is underutilized for a given period. As a result, the pheromone trail will be reduced and/or erased, restricting the possibility of other ants moving in the same direction.
 
-The pheromone release and evaporation processes contribute, respectively, (i) to strengthen and increase the probability of other ants follow the same path in search of food and (ii) to avoid convergence to an optimal local solution, allowing bad decisions (paths) to be forgotten.
+The release of pheromone release and evaporation processes support, respectively, (i) to strengthen and increase the probability of other ants follow trails in the search of food and (ii) to avoid convergence to an optimal local solution, allowing bad decisions (paths) to be forgotten.
 
-The ACO simulation assumes that ants can become bored and thus stop moving for a brief period.
+The ACO simulation assumes that ants can become bored and thus stop moving for a brief period of time.
 
 * **Anthill.pde**
 
@@ -110,7 +110,7 @@ The methods for Anthill class are:
 	void depositFood(int foodLoaded) { ... }
 ```
 
-An anthill can be added or redefined in the ACO simulation by middle-clicking the mouse button (scrollbar wheel button). A new one will be added if there is no anthill on the map. If it already exists, the current anthill will no longer exist and a new one will be created based on the position of the last mouse click event.
+An anthill can be added or redefined to the ACO simulation by middle-clicking the mouse button (scrollbar wheel button). A new one will be added if there is no anthill on the map. If it already exists, the current anthill will no longer exist and a new one will be created based on the position `(x, y)` of the last mouse click event.
 
 * **Food.pde**
 
@@ -142,15 +142,15 @@ Food can be added to the ACO simulation by right-clicking the mouse button.
 
 The size of the food can be modified by pressing <kbd>=</kbd> (to increase food size) or <kbd>-</kbd> (to decrease food size).
 
-Each food block will contain a value ranging from 4 to 10 randomly. In this way, the ACO simulation can exercise the algorithm considering that food is available in varying quantities (larger ones and smaller ones) - just as in the real world.
+Each (block of) food will contain a random value ranging from 4 to 10. In this way, the ACO simulation can exercise the algorithm considering that food is available in varying quantities (larger ones and smaller ones) - just as in the real world.
 
-This value range can be modified in the Food class constructor method based on the following `snippet`:
+This value range can be modified in the constructor method of the Food class based on the following `snippet`:
 
 ```python
 	this.value = (int) random(4, 10);
 ```
 
-Food will cease to exist when its value is equal to or less than 0. This means that one or more ants have already withdrawn (or bitten) the food completely.
+Food will cease to exist when its value is equal to or less than zero (0). This means that one or more ants have already withdrawn (or bitten) the food completely.
 
 * **Pheromone.pde**
 
@@ -184,9 +184,9 @@ Pheromones are instantiated and added to the ACO simulation in two ways:
 * When the ants leave the anthill and search for food;
 * When the ants find food and return to the anthill (to deposit the food collected);
 
-Therefore, the simulation will have two trails of pheromones that are reinforced, when ants transit the same path, but also evaporate, when ants cease to transit through it.
+Therefore, the ACO simulation will have two trails of pheromones that are reinforced when ants transit the same path, but also evaporate when they cease to transit through it.
 
-It is important to mention that the strength (or efficiency) of an ant's pheromone is reduced over time. However, when food is found or the anthill is located, its force value will be reseted to the default value.
+It is important to mention that the strength (or efficiency) of an ant's pheromone is reduced over time. However, when food is found or the anthill is located, its pheromone attraction force will be reseted to the default value.
 
 * **Map.pde**
 
@@ -254,13 +254,13 @@ The methods for Map class are:
 	int getTotalOfFood() { ... }
 ```
 
-The Map class is responsible for the interaction between entities representing ants, anthill, and food. It is also through the Map that occurs the release and evaporation of the trail pheromone. In this way, it provides the necessary mechanism for the orientation of the ants by the pheromones approach.
+The Map class is responsible for the interaction between entities that represent ants, anthill, and food. It is also through the Map that occurs the release and evaporation of pheromone trails. In this way, it provides the necessary mechanism for the orientation of ants by the pheromone approach.
 
 * **AntColonyOptimization.pde**
 
 > Main class that represents the integration of all entities (ant, anthill, food, pheromone, and map) of the Ant Colony Optimization context.
 
-The AntColonyOptimization class is responsible for configuring and simulating experiments based on the ACO approach.
+The AntColonyOptimization class is responsible for setting and simulating experiments based on the ACO approach.
 
 The main attributes for AntColonyOptimization class are:
 
